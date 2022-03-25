@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/drawable/background_border.xml" value="0.1" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/camera_activity.xml" value="0.16084093211752787" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/camera_fragment.xml" value="0.16084093211752787" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/fragment_geo_fencing.xml" value="0.2692502532928065" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/geofencing_activity.xml" value="0.2692502532928065" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/geofencing_fragment.xml" value="0.2692502532928065" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/log_in_fragment.xml" value="0.33" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/main_activity.xml" value="0.20555555555555555" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/main_fragment.xml" value="0.33" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/shared_preferences_fragment.xml" value="0.2692502532928065" />
+        <entry key="..\:/BPS-Internship/BPS-Syntax-Lessons/Android-Lessons/SimpsonFortniteProject/app/src/main/res/layout/sign_up_fragment.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

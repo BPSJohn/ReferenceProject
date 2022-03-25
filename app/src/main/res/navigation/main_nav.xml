@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.android.simpsonfortniteproject.ui.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_sharedPreferencesFragment"
+            app:destination="@id/sharedPreferencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharedPreferencesFragment"
+        android:name="com.example.android.simpsonfortniteproject.ui.sharedpreferences.SharedPreferencesFragment"
+        android:label="SharedPreferencesFragment"
+        tools:layout="@layout/shared_preferences_fragment"/>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.android.simpsonfortniteproject.ui.login.LogInFragment"
+        android:label="LogInFragment"
+        tools:layout="@layout/log_in_fragment">
+        <action
+            android:id="@+id/action_logInFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.android.simpsonfortniteproject.ui.signup.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/sign_up_fragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+</navigation>
