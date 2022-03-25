@@ -10,7 +10,6 @@ import javax.inject.Inject
 @HiltViewModel
 class SharedPreferencesViewModel @Inject constructor(
     application: Application,
-    private val sharedPreferences: SharedPreferencesManager
 ) : AndroidViewModel(application) {
 
 
