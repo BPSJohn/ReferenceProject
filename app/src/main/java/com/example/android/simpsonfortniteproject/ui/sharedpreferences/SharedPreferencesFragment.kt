@@ -1,7 +1,5 @@
 package com.example.android.simpsonfortniteproject.ui.sharedpreferences
 
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +7,14 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKeys
 import com.example.android.simpsonfortniteproject.databinding.SharedPreferencesFragmentBinding
+import com.example.android.simpsonfortniteproject.network.sharedpreferences.SharedPreferencesManager
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
 @AndroidEntryPoint
-class SharedPreferencesFragment : Fragment() {
+class SharedPreferencesFragment () : Fragment() {
 
     private val viewModel: SharedPreferencesViewModel by viewModels()
 
@@ -24,9 +22,10 @@ class SharedPreferencesFragment : Fragment() {
 
     private var age: EditText? = null
 
-    lateinit var sharedPreferences: SharedPreferences
+    @Inject
+    lateinit var sharedPreferences: SharedPreferencesManager
 
-    lateinit var masterKey: String
+    //lateinit var masterKey: String
 
 
     override fun onCreateView(
@@ -35,15 +34,15 @@ class SharedPreferencesFragment : Fragment() {
     ): View {
         val binding = SharedPreferencesFragmentBinding.inflate(inflater)
 
-        masterKey = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+        //masterKey = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
 
-        sharedPreferences = EncryptedSharedPreferences.create(
-            "MySharedPref",
-            masterKey,
-            requireContext(),
-            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-        )
+//        sharedPreferences = EncryptedSharedPreferences.create(
+//            "MySharedPref",
+//            masterKey,
+//            requireContext(),
+//            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+//            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+//        )
 
         //"MySharedPref"
 
@@ -78,16 +77,13 @@ class SharedPreferencesFragment : Fragment() {
     override fun onPause() {
         super.onPause()
 
-        // Creating a shared pref object
-        // with a file name "MySharedPref"
-        // in private mode
-
-        val myEdit = sharedPreferences.edit()
+        sharedPreferences.set("name", name?.text.toString())
+        sharedPreferences.set("age", age?.text.toString().toInt())
 
         // write all the data entered by the user in SharedPreference and apply
-        myEdit.putString("name", name?.text.toString())
-        myEdit.putInt("age", age?.text.toString().toInt())
-        myEdit.apply()
+//        myEdit.putString()
+//        myEdit.putInt()
+//        myEdit.apply()
     }
 
 }
